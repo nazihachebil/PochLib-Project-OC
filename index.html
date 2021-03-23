@@ -1,18 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<title>Poch'Lib</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-  	</head>
-  	<body>
-		<div id="myBooks">
-			<h1 class="title">Poch'Lib</h1>
-			<h2 class="h2">Nouveau Livre</h2>
-			<hr>
-			<div id="content">
-				<h2>Ma poch'liste</h2>
-			</div>
-		</div>
-  	</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://kit.fontawesome.com/f5ece239df.js" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://bootswatch.com/4/yeti//bootstrap.min.css">
+        <title>Poch'Lib</title>
+    </head>
+    <body>
+        <div id="myBooks" class="container mt-4">
+          <h1 class="display-4 text-center"> 
+            <object data="logo.svg" width="50" height="50"> </object>
+            <h1 class="title">Poch'Lib</h1>
+            <h2 class="h2">Nouveau Livre</h2>
+            <h2>
+                <input type="submit" id="add-button" value="Ajouter un livre" onclick="showForm()" class="btn btn-primary btn-block">
+            </h2>
+            <form id="book-form" style="display: none;">
+              <div class="form-group">
+                  <label for="title">Titre du livre</label>
+                  <input type="text" id="title" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="author">Auteur</label>
+                <input type="text" id="author" class="form-control">
+            </div>  
+            
+            <h2>
+                <input type="submit" value="Rechercher" onclick="searchBook()" class="btn btn-primary btn-block">
+             </h2>
+             <h2>
+                <input type="submit" value="Annuler" class="btn btn-primary btn-block">
+             </h2>
+            </form>
+            <hr>
+            <div id="result-research" style="display: none;">
+                <h2>Résultats de recherche</h2>
+            </div>
+            
+            <div id="content">
+                <h2>Ma poch'liste</h2>
+            </div>
+          </h1>
+        
+        </div>
+        <script src="index.js"></script>
+    </body>
 </html>
+
